@@ -60,10 +60,3 @@ car_price_prediction1/
 * Jupyter notebooks contain the step-by-step workflow for data exploration, preprocessing, and model building.
 
 ```
-
----
-
-If you want, I can **also add a small example usage section** showing how someone could run a notebook or script to predict a car price — this makes it **GitHub-ready and professional** for sharing or job portfolios.  
-
-Do you want me to do that next?
-```
