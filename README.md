@@ -59,4 +59,46 @@ car_price_prediction1/
 * `.env` and large data files (`data/`, `db/`) are ignored and not included in the repository.
 * Jupyter notebooks contain the step-by-step workflow for data exploration, preprocessing, and model building.
 
+
+````markdown
+## 🚀 How to Run the Project
+
+From the **project root directory**, run the following commands in your terminal:
+
+### 1️⃣ Train the model
+```bash
+python -m src.models.train
+````
+
+* Trains the model on the dataset
+* Saves the trained pipeline to `outputs/trained_model.pkl`
+
+### 2️⃣ Evaluate model + graphs
+
+```bash
+python -m src.models.evaluate
+```
+
+* Computes metrics (R², RMSE, MAE)
+* Creates plots: `actual_vs_predicted.png`, `residuals_hist.png`, `r2_vs_perfect.png`
+* Saves metrics CSV: `evaluation_metrics.csv`
+
+### 3️⃣ Feature importance
+
+```bash
+python -m src.models.interpret
+```
+
+* Extracts feature importances from the trained model
+* Saves CSV and plot: `feature_importances.csv`, `feature_importances.png`
+
+### 4️⃣ Predict on new data
+
+```bash
+python -m src.models.predict
+```
+
+* Makes predictions on new/unseen data in `data/clean_data/new_data.csv`
+* Saves predictions to `outputs/predictions.csv`
+
 ```
