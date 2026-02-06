@@ -1,10 +1,10 @@
 ---
 
 # Laptop Price Prediction
-
 ![Python](https://img.shields.io/badge/python-3.11-blue)
-![CI](https://github.com/vincent4u/car_price_prediction1/actions/workflows/ci.yml)
+![CI](https://github.com/vincent4u/car_price_prediction1/actions/workflows/ci.yml/badge.svg?branch=main)
 ![License](https://img.shields.io/badge/license-MIT-blue)
+
 
 ---
 
