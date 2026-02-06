@@ -1,3 +1,8 @@
+# Laptop Price Prediction
+
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 ````markdown
 # Car Price Prediction
