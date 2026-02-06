@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 from src.models.persist import load_model
-from src.features.build_features import preprocess_features
+from src.features.build_features import build_preprocessor
 
 # PROJECT ROOT (one level above src/)
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -14,7 +14,8 @@ def predict_new_data(model_path, new_data_path, output_path="outputs/predictions
     df_new = pd.read_csv(new_data_path)
 
     # Preprocess features
-    X_new = preprocess_features(df_new)
+    preprocessor = build_preprocessor()
+    X_new = preprocessor.transform(df_new)
 
     # Load trained model
     pipeline = load_model(model_path)
