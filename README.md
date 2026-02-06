@@ -10,7 +10,7 @@
 
 ## **Project Overview**
 
-This project uses **machine learning pipelines** to predict **car and laptop prices** based on features such as RAM, CPU, GPU, storage, brand, model, year, and mileage.
+This project uses **machine learning pipelines** to predict **claptop prices** based on hardware and specification features such as RAM, CPU frequency and cores, GPU, storage type and size, operating system, screen size, display type, and brand
 
 It includes:
 
