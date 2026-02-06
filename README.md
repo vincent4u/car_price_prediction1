@@ -1,36 +1,71 @@
+---
+
 # Laptop Price Prediction
 
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-````markdown
-# Car Price Prediction
+---
 
-This project uses machine learning techniques to predict car prices based on various features such as brand, model, year, mileage, and other attributes. It includes exploratory data analysis (EDA), data preprocessing, and model-building notebooks, along with a sample database and dependencies for reproducibility.
+## **Project Overview**
 
-## Features
+This project uses **machine learning pipelines** to predict **car and laptop prices** based on features such as RAM, CPU, GPU, storage, brand, model, year, and mileage.
 
-- Data preprocessing and cleaning pipelines
-- Exploratory Data Analysis (EDA) notebooks
-- Machine learning model implementation for price prediction
-- Structured project layout for reproducibility and scalability
+It includes:
 
-## Quick Setup
+* **Data preprocessing pipelines** for numeric and categorical features
+* **Exploratory Data Analysis (EDA)** notebooks
+* **Model training, evaluation, and interpretation**
+* Structured outputs for **reproducibility**
 
-1. Clone the repository:
+The project is **modular and industry-ready**, suitable for portfolio presentation.
+
+---
+
+## **Features**
+
+* Automatic **data preprocessing and cleaning**
+* Step-by-step **EDA and model-building notebooks**
+* **Machine learning model training** using pipelines
+* **Evaluation metrics**: R², RMSE, MAE
+* **Feature importance extraction**
+* Modular project layout for **scalability and reproducibility**
+
+---
+
+## **Project Structure**
+
+```
+car_price_prediction1/
+├── data/                  # Raw and cleaned datasets
+│   ├── clean_data/        # Processed datasets for training/prediction
+│   └── new_data/          # Data for inference
+├── notebooks/             # EDA and prototyping notebooks
+├── outputs/               # Saved models, metrics, and plots
+│   ├── models/            # Trained pipelines/models
+│   ├── metrics/           # Evaluation metrics CSV
+│   └── plots/             # Evaluation and interpretation graphs
+├── src/                   # Python modules (features, models, utils)
+├── requirements.txt       # Project dependencies
+├── .gitignore
+└── README.md
+```
+
+> **Note:** `.env` and large data files are ignored in the repository.
+
+---
+
+## **Quick Setup**
+
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/vincent4u/car_price_prediction1.git
-````
-
-2. Navigate to the project folder:
-
-```bash
 cd car_price_prediction1
 ```
 
-3. Create and activate a virtual environment:
+2. **Create and activate a virtual environment**
 
 ```bash
 python -m venv venv
@@ -40,43 +75,28 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-4. Install dependencies:
+3. **Install dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Project Structure
+---
 
-```
-car_price_prediction1/
-├── notebooks/            # Jupyter notebooks for EDA and modeling
-├── src/                  # Python scripts or modules (optional)
-├── data_sample/          # Small sample datasets (optional)
-├── models/               # Trained models (optional)
-├── requirements.txt      # Project dependencies
-├── .gitignore
-└── README.md
-```
+## **How to Run the Project**
 
-## Notes
-
-* `.env` and large data files (`data/`, `db/`) are ignored and not included in the repository.
-* Jupyter notebooks contain the step-by-step workflow for data exploration, preprocessing, and model building.
-
-
-````markdown
-## 🚀 How to Run the Project
-
-From the **project root directory**, run the following commands in your terminal:
+Run the scripts from the **project root directory**:
 
 ### 1️⃣ Train the model
+
 ```bash
 python -m src.models.train
-````
+```
 
-* Trains the model on the dataset
-* Saves the trained pipeline to `outputs/trained_model.pkl`
+* Trains the ML pipeline on the dataset
+* Saves the trained model to `outputs/models/trained_model.pkl`
+
+---
 
 ### 2️⃣ Evaluate model + graphs
 
@@ -84,9 +104,15 @@ python -m src.models.train
 python -m src.models.evaluate
 ```
 
-* Computes metrics (R², RMSE, MAE)
-* Creates plots: `actual_vs_predicted.png`, `residuals_hist.png`, `r2_vs_perfect.png`
+* Computes R², RMSE, MAE
+* Generates evaluation plots:
+
+  * `actual_vs_predicted.png`
+  * `residuals_hist.png`
+  * `r2_vs_perfect.png`
 * Saves metrics CSV: `evaluation_metrics.csv`
+
+---
 
 ### 3️⃣ Feature importance
 
@@ -95,7 +121,9 @@ python -m src.models.interpret
 ```
 
 * Extracts feature importances from the trained model
-* Saves CSV and plot: `feature_importances.csv`, `feature_importances.png`
+* Saves CSV and plot: `feature_importances.csv` & `feature_importances.png`
+
+---
 
 ### 4️⃣ Predict on new data
 
@@ -103,7 +131,8 @@ python -m src.models.interpret
 python -m src.models.predict
 ```
 
-* Makes predictions on new/unseen data in `data/clean_data/new_data.csv`
+* Runs inference on new/unseen data (`data/clean_data/new_data.csv`)
 * Saves predictions to `outputs/predictions.csv`
 
-```
+---
+
