@@ -3,7 +3,7 @@
 # Laptop Price Prediction
 
 ![Python](https://img.shields.io/badge/python-3.11-blue)
-![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![CI](https://github.com/vincent4u/car_price_prediction1/actions/workflows/ci.yml)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ---
